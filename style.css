@@ -1,81 +1,185 @@
-.imagen {
-    max-width: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:#4155e1a8;
+}
+img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    margin-bottom: 20px;
+}
+h1 {
+    color: #0a0a0a(225, 137, 65);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+}
+#boton-carrito {
+    border: none;
+    color: rgb(8, 12, 235);
+    font-size: 40px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 20px;
+    transition: all .3s;
+}
+#boton-carrito:hover {
     cursor: pointer;
+    color: white;
+    background-color: #0a0a0a;
+}
+#boton-carrito:focus {
+    outline: none;
 }
 
-.alerta {
+#contenedor-productos {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+p {
+    line-height: 1.8;
+}
+.producto {
+    max-width: 250px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.precioProducto {
     font-weight: 700;
 }
 
-body {
-    background-color: #E3D8D6;
-    overflow-x: hidden;
+.boton-agregar {
+   background-color: #0c6dfff7;
+    color: #0a0a0a;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 5px;
+    border: none;
+}
+.boton-agregar:hover {
+    cursor: pointer;
+}
+.boton-agregar:focus {
+    outline: none;
 }
 
 .modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 2rem;
-}
-
-.img-carrito {
-    width: 200px;
-    padding: 20px;
-}
-
-.modal-content {
-    background-color: #E3D8D6;
-}
-
-.parrafo {
-    font-weight: 900;
-    font-style: italic;
-}
-
-#precioTotal {
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-.boton {
+    transition: all .5s;
     opacity: 0;
+    visibility: hidden;
 }
 
-.mt-5 {
-    background-color: #0000004d;
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-carrito {
+    position: relative;
+    background-color: white;
+    min-width: 500px;
+    padding: 20px;
+    margin-top: -100%;
+    transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+
+.modal-carrito h3 {
+    color: rgb(#0a0a0a, 137, 65);
+    padding-bottom: 5px;
+}
+.modal-carrito #carritoCerrar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: #0a0a0a(225, 137, 65);
+    border: none;
+    background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+    cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+    outline: none;
+}
+.modal-carrito .precioProducto {
+    padding-top: 10px;
+    
+}
+
+.productoEnCarrito {
+    border-left: 5px solid lightblue;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
     display: flex;
-    margin-top: 2rem !important;
-    flex-wrap: wrap;
-    align-content: stretch;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+.productoEnCarrito:hover {
+    border-left: 5px solid #0a0a0a(225, 137, 65);
 }
 
-.mt-3 {
-    margin-top: 1rem !important;
-    background-color: #00ffff47;
+.boton-eliminar {
+    background-color: white;
+    color: darkblue;
+    border: none;
+    font-size: 20px;
 }
 
-.modal-body {
-    background-color: #8a2be22e;
+.boton-eliminar:hover {
+    cursor: pointer;
+}
+.boton-eliminar:focus {
+    outline: none;
 }
 
-.modal-footer {
-    background-color: #00ffff61;
+.boton-finalizar {
+    background-color: white;
+    color: darkblue;
+    border: none;
+    left: 189px;
+    font-size: 20px;
+    position: relative;
+  }
+.boton-finalizar:hover {
+    cursor: pointer;
 }
-
-button.btn.btn-primary {
-    background-color: black;
-    color: chartreuse;
+.boton-finalizar:focus {
+    outline: none;
 }
-
-.bg-dark {
-    background-color: #72b4b3 !important;
-}
+input[type="email"] {
+    text-align: center;
+    position: absolute;
+    left: 259px;
+    top: 258px;
+    width: 230px;}
