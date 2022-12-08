@@ -1,0 +1,81 @@
+.imagen {
+    max-width: 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
+.alerta {
+    font-weight: 700;
+}
+
+body {
+    background-color: #E3D8D6;
+    overflow-x: hidden;
+}
+
+.modal-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.img-carrito {
+    width: 200px;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #E3D8D6;
+}
+
+.parrafo {
+    font-weight: 900;
+    font-style: italic;
+}
+
+#precioTotal {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.boton {
+    opacity: 0;
+}
+
+.mt-5 {
+    background-color: #0000004d;
+    display: flex;
+    margin-top: 2rem !important;
+    flex-wrap: wrap;
+    align-content: stretch;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+    background-color: #00ffff47;
+}
+
+.modal-body {
+    background-color: #8a2be22e;
+}
+
+.modal-footer {
+    background-color: #00ffff61;
+}
+
+button.btn.btn-primary {
+    background-color: black;
+    color: chartreuse;
+}
+
+.bg-dark {
+    background-color: #72b4b3 !important;
+}
